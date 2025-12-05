@@ -13,7 +13,7 @@ const app = new Hono<{ Bindings: CloudflareBindings; Variables: Variables }>();
 app.use(
     "/api/auth/**",
     cors({
-        origin: "*", // In production, replace with your actual domain
+        origin: "https://poc-liveness-passkey.pages.dev", // In production, replace with your actual domain
         allowHeaders: ["*"],
         allowMethods: ["*"],
         exposeHeaders: ["Content-Length"],
