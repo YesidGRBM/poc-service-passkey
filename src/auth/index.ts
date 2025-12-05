@@ -36,7 +36,8 @@ function createAuth(env?: CloudflareBindings, cf?: IncomingRequestCfProperties) 
                 },
                 plugins: [anonymous(), passkey({
                     rpName: "Poc Passkey",
-                    rpID: "poc-service-passkey.yesid1995gonzalez.workers.dev"
+                    rpID: "poc-liveness-passkey.pages.dev",
+                    origin: 'poc-liveness-passkey.pages.dev'
                 })],
                 rateLimit: {
                     enabled: true,
