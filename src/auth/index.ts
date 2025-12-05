@@ -34,7 +34,11 @@ function createAuth(env?: CloudflareBindings, cf?: IncomingRequestCfProperties) 
                 emailAndPassword: {
                     enabled: true,
                 },
-                plugins: [anonymous(), passkey()],
+                plugins: [anonymous(), passkey({
+                    rpName: "Poc Passkey",
+                    rpID: "poc-service-passkey.yesid1995gonzalez.workers.dev",
+                    origin: "https://poc-service-passkey.yesid1995gonzalez.workers.dev"
+                })],
                 rateLimit: {
                     enabled: true,
                 },
