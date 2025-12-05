@@ -20,6 +20,7 @@ migrations_dir = "drizzle"
 
 [vars]
 BETTER_AUTH_SECRET = "NnrBeDsGainH90zQli+YvuPO8wAzUGxTUgfKE9XwQ9A="
+BETTER_AUTH_URL="https://poc-service-passkey.yesid1995gonzalez.workers.dev"
 
 
 # To protect the database id, we ignore this

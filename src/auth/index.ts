@@ -30,6 +30,7 @@ function createAuth(env?: CloudflareBindings, cf?: IncomingRequestCfProperties) 
                     : undefined,
             },
             {
+                baseURL: 'https://poc-service-passkey.yesid1995gonzalez.workers.dev',
                 emailAndPassword: {
                     enabled: true,
                 },
@@ -40,7 +41,15 @@ function createAuth(env?: CloudflareBindings, cf?: IncomingRequestCfProperties) 
                 secret: 'NnrBeDsGainH90zQli+YvuPO8wAzUGxTUgfKE9XwQ9A=',
                 trustedOrigins: ['https://poc-liveness-passkey.pages.dev'],
                 advanced: {
-                    useSecureCookies: true
+                    useSecureCookies: true,
+                    cookies: {
+                        session_token: {
+                            attributes: {
+                                sameSite: 'none',
+                                secure: true
+                            }
+                        }
+                    }
                 }
             }
         ),
