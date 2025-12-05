@@ -14,8 +14,8 @@ app.use(
     "/api/auth/**",
     cors({
         origin: "*", // In production, replace with your actual domain
-        allowHeaders: ["Content-Type", "Authorization"],
-        allowMethods: ["POST", "GET", "OPTIONS"],
+        allowHeaders: ["*"],
+        allowMethods: ["*"],
         exposeHeaders: ["Content-Length"],
         maxAge: 600,
         credentials: true,
