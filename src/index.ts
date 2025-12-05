@@ -14,11 +14,14 @@ app.use(
     "/api/auth/**",
     cors({
         origin: "https://poc-liveness-passkey.pages.dev", // In production, replace with your actual domain
-        allowHeaders: ["*"],
-        allowMethods: ["*"],
-        exposeHeaders: ["Content-Length"],
-        maxAge: 600,
         credentials: true,
+        allowMethods: ['GET', 'POST', 'PUT', 'OPTIONS'],
+        allowHeaders: [
+            'Content-Type',
+            'Authorization',
+            'Accept',
+            'X-Requested-With'
+        ]
     })
 );
 
