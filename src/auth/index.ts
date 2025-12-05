@@ -37,6 +37,7 @@ function createAuth(env?: CloudflareBindings, cf?: IncomingRequestCfProperties) 
                 rateLimit: {
                     enabled: true,
                 },
+                secret: 'NnrBeDsGainH90zQli+YvuPO8wAzUGxTUgfKE9XwQ9A='
             }
         ),
         // Only add database adapter for CLI schema generation
