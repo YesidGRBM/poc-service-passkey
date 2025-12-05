@@ -37,7 +37,8 @@ function createAuth(env?: CloudflareBindings, cf?: IncomingRequestCfProperties) 
                 rateLimit: {
                     enabled: true,
                 },
-                secret: 'NnrBeDsGainH90zQli+YvuPO8wAzUGxTUgfKE9XwQ9A='
+                secret: 'NnrBeDsGainH90zQli+YvuPO8wAzUGxTUgfKE9XwQ9A=',
+                trustedOrigins: ['https://poc-liveness-passkey.pages.dev']
             }
         ),
         // Only add database adapter for CLI schema generation
