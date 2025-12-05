@@ -40,13 +40,7 @@ function createAuth(env?: CloudflareBindings, cf?: IncomingRequestCfProperties) 
                 secret: 'NnrBeDsGainH90zQli+YvuPO8wAzUGxTUgfKE9XwQ9A=',
                 trustedOrigins: ['https://poc-liveness-passkey.pages.dev'],
                 advanced: {
-                    cookies: {
-                        session_token: {
-                            attributes: {
-                                sameSite: 'Strict'
-                            }
-                        }
-                    }
+                    useSecureCookies: true
                 }
             }
         ),
