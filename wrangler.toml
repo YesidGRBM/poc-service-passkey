@@ -18,6 +18,9 @@ database_name = "poc_rbm_service_passkey-db"
 database_id = "e7711979-1c74-4344-aced-14eb1b26ba56"
 migrations_dir = "drizzle"
 
+[vars]
+BETTER_AUTH_SECRET = "NnrBeDsGainH90zQli+YvuPO8wAzUGxTUgfKE9XwQ9A="
+
 
 # To protect the database id, we ignore this
 # file when committing to the repo by running once:
