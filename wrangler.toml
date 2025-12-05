@@ -15,7 +15,7 @@ mode = "smart"
 [[d1_databases]]
 binding = "DATABASE"
 database_name = "poc_rbm_service_passkey-db"
-database_id = "your-d1-database-id-here"
+database_id = "e7711979-1c74-4344-aced-14eb1b26ba56"
 migrations_dir = "drizzle"
 
 
