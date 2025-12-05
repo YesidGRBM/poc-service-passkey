@@ -38,7 +38,16 @@ function createAuth(env?: CloudflareBindings, cf?: IncomingRequestCfProperties) 
                     enabled: true,
                 },
                 secret: 'NnrBeDsGainH90zQli+YvuPO8wAzUGxTUgfKE9XwQ9A=',
-                trustedOrigins: ['https://poc-liveness-passkey.pages.dev']
+                trustedOrigins: ['https://poc-liveness-passkey.pages.dev'],
+                advanced: {
+                    cookies: {
+                        session_token: {
+                            attributes: {
+                                sameSite: 'Strict'
+                            }
+                        }
+                    }
+                }
             }
         ),
         // Only add database adapter for CLI schema generation
